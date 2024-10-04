@@ -1,0 +1,35 @@
+{
+    "name": "skpassegna/ipregistry-php-sdk",
+    "description": "IpRegistry PHP SDK (PSR-4 autoloading compatible/Unofficial)",
+    "keywords": [
+        "ipregistry",
+        "IP",
+        "Lookup",
+        "IP Lookup",
+        "sdk",
+        "php"
+    ],
+    "homepage": "https://github.com/skpassegna/ipregistry-php-sdk",
+    "license": "GPL-2.0-or-later",
+    "version": "1.0.0",
+    "type": "library",
+    "autoload": {
+        "psr-4": {
+            "Ipregistry\\": "src/",
+            "Ipregistry\\Test\\": "tests/"
+        }
+    },
+    "require": {
+        "php": "^8.0",
+        "ext-curl": "*",
+        "guzzlehttp/guzzle": "^7.9.2",
+        "monolog/monolog": "^3.7.0",
+        "psr/http-message": "^2.0"
+    },
+    "require-dev": {
+        "friendsofphp/php-cs-fixer": "^3.64",
+        "symfony/var-dumper": "^7.1",
+        "phpunit/phpunit": "^9.6",
+        "vlucas/phpdotenv": "^5.6"
+    }
+}

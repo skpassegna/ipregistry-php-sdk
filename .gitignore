@@ -1,0 +1,42 @@
+### Composer ###
+composer.phar
+/vendor/
+composer.lock
+
+### Git ###
+*.orig
+*.BACKUP.*
+*.BASE.*
+*.LOCAL.*
+*.REMOTE.*
+*_BACKUP_*.txt
+*_BASE_*.txt
+*_LOCAL_*.txt
+*_REMOTE_*.txt
+
+### PHP-CS-Fixer ###
+.php-cs-fixer.cache
+.php-cs-fixer.php
+
+### PHPUnit ###
+.phpunit.result.cache
+.phpunit.cache
+/app/phpunit.xml
+/build/
+
+### VisualStudioCode ###
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+!.vscode/*.code-snippets
+.history/
+*.vsix
+
+### VisualStudioCode Patch ###
+.history
+.ionide
+
+.env
+plan.md
