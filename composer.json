@@ -10,7 +10,7 @@
         "php"
     ],
     "homepage": "https://github.com/skpassegna/ipregistry-php-sdk",
-    "license": "GPL-2.0-or-later",
+    "license": "GPL-3.0-or-later",
     "version": "1.0.0",
     "type": "library",
     "autoload": {
