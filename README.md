@@ -143,6 +143,26 @@ $originUserAgentResponse = $userAgentParsing->originParse();
 echo "Originating User-Agent: " . $originUserAgentResponse->getUserAgentHeader() . PHP_EOL;
 ```
 
+## Accessing Response Data: Convenience Methods
+
+The `Ipregistry\Sdk\Response` class provides a set of convenience methods (getters) for accessing specific data fields from the API responses. These methods follow a consistent naming convention:
+
+* **`get[FieldName]()`:**  Used for most fields, where `[FieldName]` is the CamelCase representation of the field name in the API response.
+    * *Examples:* `getIp()`, `getCountryCode()`, `getTimeZoneId()`, `getUserAgentName()`.
+* **`is[FieldName]()`:** Used for boolean fields, where `[FieldName]` is the CamelCase representation of the field name.
+    * *Examples:* `isInEu()`, `isVpn()`, `isTor()`. 
+
+**Example:**
+
+To get the country name from an IP lookup response:
+
+```php
+$response = $ipLookup->lookup('8.8.8.8');
+$countryName = $response->getCountryName();
+```
+
+Refer to the `Ipregistry\Sdk\Response` class documentation for a complete list of available convenience methods and the data fields they return.
+
 ## Error Handling
 
 The SDK throws specific exceptions for various error conditions, providing informative messages and resolution suggestions (when available from the API):
@@ -244,4 +264,4 @@ Contributions are welcome! Please open an issue or submit a pull request on GitH
 
 ## License
 
-This SDK is licensed under the GPL-2.0-or-later License.
+This SDK is licensed under the [GNU General Public License v3.0](LICENSE) License.
