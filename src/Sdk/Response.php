@@ -1229,4 +1229,15 @@ class Response
         }
         return (string) $data; // Cast SimpleXMLElement to string
     }
+
+    /**
+     *  Get the raw API response.
+     * 
+     * @return mixed|null The field value, or null if not found.
+     */
+    public function raw(): mixed
+    {
+        
+        return ($this->response) ?? null; // Cast SimpleXMLElement to string
+    }
 }
