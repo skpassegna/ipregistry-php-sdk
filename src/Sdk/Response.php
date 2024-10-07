@@ -1231,13 +1231,12 @@ class Response
     }
 
     /**
-     *  Get the raw API response.
-     * 
-     * @return mixed|null The field value, or null if not found.
+     * Get the raw Guzzle response object.
+     *
+     * @return ResponseInterface|null The Guzzle response object, or null if not available.
      */
-    public function raw(): mixed
+    public function raw(): ?ResponseInterface
     {
-        
-        return ($this->response) ?? null; // Cast SimpleXMLElement to string
+        return $this->response;
     }
 }
